@@ -1,13 +1,12 @@
-// json2html.js
 export default function json2html(data) {
-    // Get all unique columns from the data
-    const columns = Array.from(new Set(
+    // Get all unique column names from all objects
+    const columns = [...new Set(
         data.reduce((cols, row) => {
             return cols.concat(Object.keys(row));
         }, [])
-    ));
+    )];
 
-    // Build the HTML table string
+    // Build the HTML table
     let html = '<table data-user="mayankasheshgupta@gmail.com">\n';
     
     // Add header row
