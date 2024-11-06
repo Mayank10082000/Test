@@ -1,0 +1,5 @@
+defaults:
+  - scope:
+      path: "**.js"
+    values:
+      content_type: "application/javascript"
