@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON to HTML Table Test</title>
+</head>
+<body>
+    <div id="output"></div>
+    
+    <script type="module">
+        import json2html from './json2html.js';
+        
+        const data = [
+            { Name: "Alice", Age: 25 },
+            { Name: "Bob", Age: 30 },
+            { Name: "Charlie", Age: 35, Gender: "M" }
+        ];
+        
+        document.getElementById('output').innerHTML = json2html(data);
+    </script>
+</body>
+</html>
